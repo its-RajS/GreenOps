@@ -54,6 +54,11 @@ interface AnalysisResult {
     serviceBreakdown: Array<{ name: string; value: number; percentage: number }>;
     aiInsight: { title: string; message: string; suggestion: string; severity: string };
   };
+  forecast: {
+    forecast: number[];
+    confidence: number;
+    months: string[];
+  };
 }
 
 export default function Dashboard() {

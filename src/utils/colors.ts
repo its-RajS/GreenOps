@@ -1,7 +1,7 @@
 const SEVERITY_COLORS = {
-  high: "bg-red-500/10 text-red-700 dark:text-red-400 border-red-500/20",
-  medium: "bg-yellow-500/10 text-yellow-700 dark:text-yellow-400 border-yellow-500/20",
-  low: "bg-blue-500/10 text-blue-700 dark:text-blue-400 border-blue-500/20",
+  high: "bg-[#cb2eba]/10 text-[#cb2eba] border-[#cb2eba]/20",
+  medium: "bg-[#787496]/10 text-[#787496] border-[#787496]/20",
+  low: "bg-[#d8bfd8]/10 text-[#787496] border-[#d8bfd8]/30",
 };
 
 export function getSeverityColor(severity: "high" | "medium" | "low"): string {
@@ -10,20 +10,20 @@ export function getSeverityColor(severity: "high" | "medium" | "low"): string {
 
 export function getPriorityColor(priority: "High" | "Medium" | "Low"): string {
   const colors: Record<string, string> = {
-    High: "bg-red-500/10 text-red-700 dark:text-red-400",
-    Medium: "bg-yellow-500/10 text-yellow-700 dark:text-yellow-400",
-    Low: "bg-blue-500/10 text-blue-700 dark:text-blue-400",
+    High: "bg-[#cb2eba]/10 text-[#cb2eba]",
+    Medium: "bg-[#787496]/10 text-[#787496]",
+    Low: "bg-[#d8bfd8]/10 text-[#787496]",
   };
   return colors[priority];
 }
 
 export function getScoreColor(score: string): string {
   const colors: Record<string, string> = {
-    A: "text-emerald-600 dark:text-emerald-400",
-    B: "text-blue-600 dark:text-blue-400",
-    C: "text-yellow-600 dark:text-yellow-400",
-    D: "text-orange-600 dark:text-orange-400",
-    F: "text-red-600 dark:text-red-400",
+    A: "text-[#cb2eba]",
+    B: "text-[#787496]",
+    C: "text-[#d8bfd8]",
+    D: "text-[#787496]",
+    F: "text-[#cb2eba]",
   };
-  return colors[score] || "text-gray-600";
+  return colors[score] || "text-[#787496]";
 }

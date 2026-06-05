@@ -9,7 +9,7 @@ interface ServiceBreakdownChartProps {
   title?: string;
 }
 
-const COLORS = ['#10b981', '#06b6d4', '#f59e0b', '#ef4444'];
+const COLORS = ['#cb2eba', '#787496', '#d8bfd8', '#a78bfa'];
 
 export function ServiceBreakdownChart({ data, title = 'Service Breakdown' }: ServiceBreakdownChartProps) {
   return (

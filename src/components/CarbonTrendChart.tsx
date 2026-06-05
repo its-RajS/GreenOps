@@ -30,6 +30,7 @@ export function CarbonTrendChart({ data, forecastData, title = 'Carbon Emissions
     forecastData.forecast.forEach((value, index) => {
       chartData.push({
         month: forecastData.months[index] || `Month ${index + 1}`,
+        // historical: null as number | null,
         historical: 0,
         forecast: value,
       });
@@ -57,9 +58,9 @@ export function CarbonTrendChart({ data, forecastData, title = 'Carbon Emissions
           <Line
             type="monotone"
             dataKey="historical"
-            stroke="#10b981"
+            stroke="#cb2eba"
             strokeWidth={3}
-            dot={{ fill: '#10b981', r: 5 }}
+            dot={{ fill: '#cb2eba', r: 5 }}
             activeDot={{ r: 7 }}
             name="Historical CO₂"
             connectNulls
@@ -68,10 +69,10 @@ export function CarbonTrendChart({ data, forecastData, title = 'Carbon Emissions
             <Line
               type="monotone"
               dataKey="forecast"
-              stroke="#38bdf8"
+              stroke="#d8bfd8"
               strokeWidth={3}
               strokeDasharray="5 5"
-              dot={{ fill: '#38bdf8', r: 4 }}
+              dot={{ fill: '#d8bfd8', r: 4 }}
               activeDot={{ r: 6 }}
               name="Projected CO₂ (AI)"
               connectNulls

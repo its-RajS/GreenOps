@@ -5,6 +5,9 @@ const config = {
   theme: {
     extend: {
       colors: {
+        customPrimary: "#cb2eba",
+        customSecondary: "#787496",
+        customAccent: "#d8bfd8",
         emerald: {
           50: "#f0fdf4",
           100: "#dcfce7",
